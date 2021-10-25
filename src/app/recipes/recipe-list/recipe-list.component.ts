@@ -10,6 +10,7 @@ import { RecipeModel } from '../recipe.model';
 export class RecipeListComponent implements OnInit {
 
   recipes: RecipeModel[] = [
+    new RecipeModel('A Test Recipe', 'This is simply a test', 'https://www.saveur.com/app/uploads/2020/11/20/Y7RZPFZEERAZVHJ2VHC2RXMEEY.jpg'),
     new RecipeModel('A Test Recipe', 'This is simply a test', 'https://www.saveur.com/app/uploads/2020/11/20/Y7RZPFZEERAZVHJ2VHC2RXMEEY.jpg')
   ];
 
