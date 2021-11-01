@@ -1,13 +1,28 @@
 import { EventEmitter } from "@angular/core";
 
 import { RecipeModel } from "./recipe.model";
+import {IngredientModel} from "../shared/ingredient.model";
 
 export class RecipeService {
   recipeSelected = new EventEmitter<RecipeModel>();
 
   private recipes: RecipeModel[] = [
-    new RecipeModel('A Test Recipe', 'This is simply a test', 'https://www.saveur.com/app/uploads/2020/11/20/Y7RZPFZEERAZVHJ2VHC2RXMEEY.jpg'),
-    new RecipeModel('A Test Recipe 2', 'This is simply a test 2', 'https://www.saveur.com/app/uploads/2020/11/20/Y7RZPFZEERAZVHJ2VHC2RXMEEY.jpg')
+    new RecipeModel(
+      'Tasty Schnitzel',
+      'A super-tasty Schnitzel - just awesome!',
+      'https://avatars.mds.yandex.net/get-zen_doc/3952334/pub_5fc653ff6d4e6a5c3f702dda_5fc65e15a093e94902050470/scale_1200',
+    [
+      new IngredientModel('Meat', 1),
+      new IngredientModel('French Fries', 20)
+    ]),
+    new RecipeModel(
+      'Big Fat Burger',
+      'What else you need to say',
+      'https://avatars.mds.yandex.net/get-zen_doc/3384370/pub_5ecad0598ab85d61ea0a0ab4_5ecad91f44070e5cfc491ede/scale_1200',
+      [
+        new IngredientModel('Buns', 2),
+        new IngredientModel('Meat', 1)
+      ])
   ];
 
   getRecipes() {
