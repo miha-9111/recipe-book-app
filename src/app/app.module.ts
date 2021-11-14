@@ -19,6 +19,7 @@ import { DropdownDirective } from "./shared/dropdown.directive";
 import { RecipeService } from "./recipes/recipe.service";
 import { ShoppingListService } from "./shopping-list/shopping-list.service";
 import { DataStorageService } from "./shared/data-storage.service";
+import { AuthComponent } from './auth/auth/auth.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { DataStorageService } from "./shared/data-storage.service";
     ShoppingEditComponent,
     DropdownDirective,
     RecipeStartComponent,
-    RecipeEditComponent
+    RecipeEditComponent,
+    AuthComponent
   ],
   imports: [
     BrowserModule,
