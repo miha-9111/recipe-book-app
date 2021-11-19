@@ -1,5 +1,6 @@
-import { Directive, ElementRef, HostBinding, HostListener } from "@angular/core";
+import {Directive, ElementRef, HostBinding, HostListener, Injectable} from "@angular/core";
 
+@Injectable({providedIn: "root"})
 @Directive({
   selector: '[appDropdown]'
 })

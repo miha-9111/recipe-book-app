@@ -13,8 +13,8 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
 import { AuthComponent } from './auth/auth/auth.component';
 import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinner/loading-spinner.component';
 import { AlertComponent } from './shared/alert/alert/alert.component';
-
 import { DropdownDirective } from "./shared/dropdown.directive";
+
 import { RecipeService } from "./recipes/recipe.service";
 import { ShoppingListService } from "./shopping-list/shopping-list.service";
 import { AuthInterceptorService } from "./auth/auth/auth.interceptor.service";
@@ -25,10 +25,10 @@ import { AuthInterceptorService } from "./auth/auth/auth.interceptor.service";
     HeaderComponent,
     ShoppingListComponent,
     ShoppingEditComponent,
-    DropdownDirective,
     AuthComponent,
     LoadingSpinnerComponent,
-    AlertComponent
+    AlertComponent,
+    DropdownDirective,
   ],
   imports: [
     BrowserModule,
