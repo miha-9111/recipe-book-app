@@ -6,13 +6,11 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from "@angular/common/http";
 
 import { RecipesModule } from "./recipes/recipes.module";
 import { ShoppingListModule } from "./shopping-list/shopping-list.module";
+import { SharedModule } from "./shared/shared.module";
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { AuthComponent } from './auth/auth/auth.component';
-import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinner/loading-spinner.component';
-import { AlertComponent } from './shared/alert/alert/alert.component';
-import { DropdownDirective } from "./shared/dropdown.directive";
 
 import { RecipeService } from "./recipes/recipe.service";
 import { ShoppingListService } from "./shopping-list/shopping-list.service";
@@ -23,9 +21,6 @@ import { AuthInterceptorService } from "./auth/auth/auth.interceptor.service";
     AppComponent,
     HeaderComponent,
     AuthComponent,
-    LoadingSpinnerComponent,
-    AlertComponent,
-    DropdownDirective,
   ],
   imports: [
     BrowserModule,
@@ -34,7 +29,8 @@ import { AuthInterceptorService } from "./auth/auth/auth.interceptor.service";
     HttpClientModule,
     AppRoutingModule,
     RecipesModule,
-    ShoppingListModule
+    ShoppingListModule,
+    SharedModule
   ],
   providers: [
     ShoppingListService,
