@@ -1,5 +1,5 @@
 import { IngredientModel } from "../../shared/ingredient.model";
-import * as shoppingListActions from "./shopping-list.actions";
+import * as ShoppingListActions from "./shopping-list.actions";
 
 const initialState = {
   ingredients: [
@@ -8,12 +8,17 @@ const initialState = {
   ]
 };
 
-export function shoppingListReducer(state = initialState, action: shoppingListActions.addIngredient) {
+export function shoppingListReducer(state = initialState, action: ShoppingListActions.ShoppingListActions) {
   switch (action.type) {
-    case shoppingListActions.ADD_INGREDIENT:
+    case ShoppingListActions.ADD_INGREDIENT:
       return {
         ...state,
         ingredients: [...state.ingredients, action.payload]
+      };
+    case ShoppingListActions.ADD_INGREDIENTS:
+      return {
+        ...state,
+        ingredients: [...state.ingredients, ...action.payload]
       };
     default:
       return state;
