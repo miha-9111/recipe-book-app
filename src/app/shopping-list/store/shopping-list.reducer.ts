@@ -1,4 +1,4 @@
-import { IngredientModel } from "../shared/ingredient.model";
+import { IngredientModel } from "../../shared/ingredient.model";
 import * as shoppingListActions from "./shopping-list.actions";
 
 const initialState = {
