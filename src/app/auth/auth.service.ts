@@ -23,7 +23,7 @@ export interface AuthResponseData {
 
 @Injectable({providedIn: "root"})
 export class AuthService {
-  user = new BehaviorSubject<UserModel>(null);
+  // user = new BehaviorSubject<UserModel>(null);
 
   private tokenExpirationTimer: any;
 
