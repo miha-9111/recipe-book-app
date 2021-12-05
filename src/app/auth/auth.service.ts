@@ -58,7 +58,8 @@ export class AuthService {
         password: password,
         returnSecureToken: true
       }
-    ).pipe(
+    )
+    .pipe(
       catchError(this.handleError),
       tap(resData => {
         this.handleAuthentication(
