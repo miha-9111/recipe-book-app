@@ -10,7 +10,7 @@ import * as fromApp from "../store/app.reducer";
 import * as RecipesActions from "../recipes/store/recipe.actions";
 
 @Injectable({providedIn: "root"})
-export class RecipesResolverService implements Resolve<RecipeModel[]>{
+export class RecipesResolverService implements Resolve<{recipes: RecipeModel[]}>{
   constructor(private store: Store<fromApp.AppState>,
               private actions$: Actions) {}
 
@@ -23,13 +23,13 @@ export class RecipesResolverService implements Resolve<RecipeModel[]>{
       }),
       switchMap(recipes => {
         if (recipes.length === 0) {
-          this.store.dispatch(new RecipesActions.FetchRecipes());
+          this.store.dispatch(RecipesActions.fetchRecipes());
           return this.actions$.pipe(
-            ofType(RecipesActions.SET_RECIPES),
+            ofType(RecipesActions.setRecipes),
             take(1)
           );
         } else {
-          return of(recipes);
+          return of({recipes});
         }
       })
     );
