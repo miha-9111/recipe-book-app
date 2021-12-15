@@ -31,6 +31,6 @@ export class ShoppingListComponent implements OnInit {
 
   onEditItem(index: number) {
     // this.slService.startedEditing.next(index);
-    this.store.dispatch(new ShoppingListActions.StartEdit(index));
+    this.store.dispatch(ShoppingListActions.startEdit({index}));
   }
 }
